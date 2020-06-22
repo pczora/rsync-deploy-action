@@ -1,0 +1,21 @@
+name: "rsync Deploy Action"
+description: "Deploys artifacts using ssh and rsync"
+inputs:
+  ssh_key:
+    description: "The private key used to access the host"
+    required: true
+  source_path:
+    description: "The source path of the files which are to be deployed"
+    required: true
+  remote_user:
+    description: "The remote username"
+    required: true
+  host:
+    description: "The hostname of the deployment target"
+    required: true
+  remote_path:
+    description: "The path of the deployment target"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
