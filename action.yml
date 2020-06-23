@@ -16,6 +16,9 @@ inputs:
   remote_path:
     description: "The path of the deployment target"
     required: true
+  rsync_params:
+    description: "Additional rsync parameters"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
